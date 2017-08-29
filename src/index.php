@@ -19,14 +19,13 @@
   
   <body data-template="<?=$template_name?>">
     <?php include "partials/header.php" ?>
-    <div id="dvPageWrapper" class="page-wrapper">
-      <main>
-        <?php include $target_file; ?>        
-      </main>
-      <?php include "partials/footer.php" ?>
-    </div>        
-    
+    <main>
+      <?php include $target_file; ?>        
+    </main>
+    <?php include "partials/footer.php" ?>
     <script src="scripts/vendors.min.js"></script>
     <script src="scripts/apps.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </body>
 </html>
