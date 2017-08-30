@@ -8,7 +8,7 @@
         <span>day</span>
       </h1>
     </div>
-    <div>
+    <div class="main">
       <h3>blue heaven</h3>
       <p>
         Cashew Mylk (Cashews, Filtered water) <br> Banana
@@ -26,8 +26,9 @@
         <li>Prebotic</li>
         <li>Oral Health</li>
       </ul>
+
     </div>
-    <div>
+    <div class="desc">
       <p>
         A creamy, pastel blue smoothie with a subtle bubble-gum sweetness. Heavenly notes of banana, lychee and vanilla belie the
         therapeutic nature of this magical mylkshake.
@@ -119,7 +120,10 @@
           </td>
         </tr>
       </table>
-
     </div>
+  </div>
+  <div class="control">
+    <a href="#!" class="btn btn-white">QTY: 1</a>
+    <a href="#!" class="btn">+ Add To Cart</a>
   </div>
 </section>

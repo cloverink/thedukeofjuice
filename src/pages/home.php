@@ -1,4 +1,4 @@
-<?php include 'section-prod.html' ?>
+<?php include 'section-prod.php' ?>
 
 <section>
   desc
