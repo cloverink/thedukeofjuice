@@ -1,11 +1,11 @@
-<section id="section-prod">
+<?php include 'section-prod.html' ?>
 
+<section>
+  desc
 </section>
 
 <section>
-desc
+  list
 </section>
 
-<section>
-list
-</section>
+

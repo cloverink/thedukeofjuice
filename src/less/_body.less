@@ -1,11 +1,49 @@
 section {
   width: 100%;
   clear: both;
-  min-height: 555px;
 
+  .container {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 555px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    > div {
+      display: table-cell;
+    }
+  }
 
 }
 
 #section-prod {
-  background: #719faf;
+  
+  .container {
+    table-layout: fixed;
+    padding: 75px 40px 50px;
+
+    .name {
+      h1 {
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 60px;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &.blue {
+    background: #6c9dae;
+
+    .container {
+      background-image: url('/assets/images/blue.jpg');
+      background-size: 500px;
+      background-repeat: no-repeat;
+      background-position: 50px center;
+    }
+  }
 }
