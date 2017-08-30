@@ -28,6 +28,7 @@
             <input id="txtPass" type="email" placeholder="Enter your password">
           </div>
           <div>
+            <br>
             <a href="#!">Forget your password?</a>
           </div>
           <input type="submit" class="btn btn-sky" value="Login">
