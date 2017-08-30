@@ -29,9 +29,19 @@ section {
 
 }
 
+#section-items {
+  > a {
+    float: left;
+    width: calc(~"100%/3");
+    background: red;
+  }
+}
+
 #section-desc {
   .container {
     max-width: 1200px;
+    min-height: 0;
+    padding-bottom: 50px;
     > div {
       padding: 0 50px;
       font-size: 13px;
@@ -138,7 +148,7 @@ section {
   &.blue {
     background: #6c9dae;
     .container {
-      background-image: url('/assets/images/blue.jpg');
+      background-image: url('/assets/images/blue.png');
       background-size: 500px;
       background-repeat: no-repeat;
       background-position: 50px center;
