@@ -15,7 +15,6 @@ section {
       position: relative;
     }
   }
-
   h3.title {
     text-align: center;
     color: #373535;
@@ -26,31 +25,38 @@ section {
     letter-spacing: 1px;
     padding: 40px 0;
   }
-
 }
 
 #section-items {
-  > a {
+  >a {
     float: left;
     width: calc(~"100%/3");
-
     background: url('/assets/images/1x1.png') center center no-repat;
     background-size: 100%;
     position: relative;
-
     img {
       visibility: hidden;
       z-index: -1;
       width: 100%;
     }
-
-    &.brown { background-image: url('/assets/images/brown.png'); }
-    &.green { background-image: url('/assets/images/green.png'); }
-    &.white { background-image: url('/assets/images/white.png'); }
-    &.red { background-image: url('/assets/images/red.png'); }
-    &.orange { background-image: url('/assets/images/orange.png'); }
-    &.yellow { background-image: url('/assets/images/yellow.png'); }
-
+    &.brown {
+      background-image: url('/assets/images/brown.png');
+    }
+    &.green {
+      background-image: url('/assets/images/green.png');
+    }
+    &.white {
+      background-image: url('/assets/images/white.png');
+    }
+    &.red {
+      background-image: url('/assets/images/red.png');
+    }
+    &.orange {
+      background-image: url('/assets/images/orange.png');
+    }
+    &.yellow {
+      background-image: url('/assets/images/yellow.png');
+    }
     &:after {
       .btn;
       content: '+ add to cart';
@@ -62,14 +68,12 @@ section {
       transition: all .3s ease;
       opacity: 0;
     }
-
     &:hover {
-      &:after { 
+      &:after {
         top: calc(~"50% - 55px/2");
         opacity: 1;
       }
     }
-
   }
 }
 
@@ -78,7 +82,7 @@ section {
     max-width: 1200px;
     min-height: 0;
     padding-bottom: 50px;
-    > div {
+    >div {
       padding: 0 50px;
       font-size: 13px;
       line-height: 18px;
@@ -167,7 +171,6 @@ section {
       }
     }
   }
-
   .control {
     position: absolute;
     width: 100%;
@@ -175,12 +178,10 @@ section {
     bottom: 50px;
     text-align: center;
     z-index: 999;
-
-    a + a {
+    a+a {
       margin-left: 20px;
     }
   }
-
   &.blue {
     background: #6c9dae;
     .container {

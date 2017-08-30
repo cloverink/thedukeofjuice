@@ -14,5 +14,3 @@
 <section>
   list
 </section>
-
-
