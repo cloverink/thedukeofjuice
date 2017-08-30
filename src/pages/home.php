@@ -6,8 +6,4 @@
 
 <?php include 'section-login.php' ?>
 
-<?php include 'section-login.php' ?>
-
-<section>
-  list
-</section>
+<?php include 'section-contact.php' ?>
