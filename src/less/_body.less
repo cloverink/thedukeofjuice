@@ -33,7 +33,43 @@ section {
   > a {
     float: left;
     width: calc(~"100%/3");
-    background: red;
+
+    background: url('/assets/images/1x1.png') center center no-repat;
+    background-size: 100%;
+    position: relative;
+
+    img {
+      visibility: hidden;
+      z-index: -1;
+      width: 100%;
+    }
+
+    &.brown { background-image: url('/assets/images/brown.png'); }
+    &.green { background-image: url('/assets/images/green.png'); }
+    &.white { background-image: url('/assets/images/white.png'); }
+    &.red { background-image: url('/assets/images/red.png'); }
+    &.orange { background-image: url('/assets/images/orange.png'); }
+    &.yellow { background-image: url('/assets/images/yellow.png'); }
+
+    &:after {
+      .btn;
+      content: '+ add to cart';
+      position: absolute;
+      left: calc(~"50% - 110px/2");
+      top: calc(~"50% + 55px/2");
+      width: 110px;
+      text-align: center;
+      transition: all .3s ease;
+      opacity: 0;
+    }
+
+    &:hover {
+      &:after { 
+        top: calc(~"50% - 55px/2");
+        opacity: 1;
+      }
+    }
+
   }
 }
 
