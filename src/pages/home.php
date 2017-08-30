@@ -7,3 +7,5 @@
 <?php include 'section-login.php' ?>
 
 <?php include 'section-contact.php' ?>
+
+<?php include 'section-location.php' ?>

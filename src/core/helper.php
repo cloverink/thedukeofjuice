@@ -1,5 +1,7 @@
 <?php
 
+$site_google_map_api = "AIzaSyBifc4q3Rgjph4MgJ1AZNCvyNi8EyPPy4M&q=500+Burwood+Rd,+Hawthorn+VIC+3122";
+
 class Helper {
   public function getTemplate($name) {
     return "templates/" . $name . ".php";
