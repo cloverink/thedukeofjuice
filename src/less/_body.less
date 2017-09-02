@@ -170,7 +170,7 @@ section {
   .cart {
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 50px auto;
     position: relative;
     table {
       width: 100%;
@@ -190,13 +190,33 @@ section {
         }
       }
       tbody {
-
         td {
+          vertical-align: top;
           text-align: center;
           padding: 20px;
-
           &:nth-child(1) {
             text-align: left;
+          }
+          &:nth-child(3) {
+            form {
+              display: inline;
+              input {
+                text-align: right;
+                width: 50px;
+                margin-bottom: 0;
+              }
+            }
+            .btn-ok {
+              min-width: 30px;
+              padding: 15px;
+              border-radius: 15px;
+            }
+            .btn-edit {
+              font-size: 25px;
+              color: #818284;
+              padding: 0 0 0 10px;
+              vertical-align: middle;
+            }
           }
           &:nth-child(5) {
             font-size: 20px;
@@ -208,9 +228,7 @@ section {
               border-radius: 100%;
               position: relative;
               color: #373535;
-
               transition: all .3s ease;
-
               &:before,
               &:after {
                 content: '';
@@ -222,22 +240,88 @@ section {
                 left: calc(~"50% - 15px/2");
                 top: 49%;
               }
-
               &:after {
                 transform: rotate(-45deg);
               }
-
               &:hover {
                 transform: rotate(90deg);
               }
             }
           }
         }
-
+      }
+      tfoot {
+        td {
+          padding: 20px;
+        }
       }
     }
   }
-  .container {}
+  .container {
+    table-layout: fixed;
+    >div {
+      vertical-align: top;
+      padding: 0 50px 0 0;
+      &:last-child {
+        padding: 0 0 0 50px;
+      }
+      >div {
+        background: #ddd;
+        padding: 50px;
+        min-height: 200px;
+        margin-bottom: 50px;
+        h4 {
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #373535;
+          font-size: 25px;
+          padding: 0 0 20px 0;
+        }
+        form {
+          input {
+            width: calc(~"100% - 20px");
+          }
+        }
+        &.grand-total {
+          text-align: right;
+          >div:not(.hr) {
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0 0 10px;
+            &.grandtotal {
+              font-weight: 900;
+              font-size: 30px;
+              padding: 20px 0;
+            }
+            span {
+              min-width: 150px;
+              display: inline-block;
+            }
+          }
+        }
+        &.estimate {
+          form {
+            width: calc(~"50% - 20px");
+            float: left;
+            &:last-child {
+              padding-left: 40px;
+              >div {
+                &:last-child {
+                  padding-top: 20px;
+                  text-align: right;
+                  span {
+                    font-size: 13px;
+                    color: #c62828;
+                    padding-right: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 #section-items {
