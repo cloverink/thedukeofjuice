@@ -3,7 +3,8 @@
   <div class="container">
 
     <div>
-      <iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<?=$site_google_map_api?>&q=500+Burwood+Rd,+Hawthorn+VIC+3122" allowfullscreen>
+      <iframe class="map" frameborder="0" style="border:0" 
+      src="https://www.google.com/maps/embed/v1/place?key=<?=$site_google_map_api?>&q=260+Clarendon+St,+South+Melbourne+VIC+3205" allowfullscreen>
       </iframe>
     </div>
 
