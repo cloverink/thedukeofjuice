@@ -8,4 +8,6 @@
 
 <?php include 'section-contact.php' ?>
 
+<?php include 'section-cart.php' ?>
+
 <?php include 'section-location.php' ?>
