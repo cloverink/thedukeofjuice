@@ -20,12 +20,12 @@
             <form>
               <input type="text" value="1" readonly="true">
             </form>
-            <a href="#!" class="btn btn-sky btn-ok hide">OK</a>
+            <a href="#!" class="btn btn-sky btn-ok">OK</a>
             <a href="#!" class="btn-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
           </td>
           <td>$12.50</td>
           <td>
-            <a href="#!"></a>
+            <a href="#!" class="del"></a>
           </td>
         </tr>
       </tbody>
@@ -89,9 +89,6 @@
             <a href="#!" class="btn btn-sky">Estimate</a>
           </div>
         </form>
-
-
-
 
       </div>
 

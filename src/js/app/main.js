@@ -43,8 +43,74 @@ var Main = (function (self) {
 
   };
 
+  func.buyItem = function(productName) {
+
+    var tr = "";
+    tr += '<tr> ';
+      tr += '<td>' + productName + ' heaven</td> ';
+      tr += '<td>$12.50</td> ';
+      tr += '<td> ';
+        tr += '<form>';
+          tr += '<input type="text" value="1" readonly="true">';
+        tr += '</form>';
+        tr += '<a href="#!" class="btn btn-sky btn-ok">OK</a>';
+        tr += '<a href="#!" class="btn-edit"><i class="fa fa-pencil-square-o"></i></a> ';
+      tr += '</td> ';
+      tr += '<td>$12.50</td> ';
+      tr += '<td> <a href="#!" class="del"></a> </td> ';
+    tr += '</tr>';
+    $("#section-cart .cart").find("tbody").append(tr);
+    func.calculatePrice();
+
+  };
+
+  func.calculatePrice = function() {
+
+  };
+
+  func.initShop = function() {
+
+    $("#section-items").find(".brown").on("click", function(){
+      func.buyItem("brown");
+    });
+    $("#section-items").find(".green").on("click", function(){
+      func.buyItem("green");
+    });
+    $("#section-items").find(".white").on("click", function(){
+      func.buyItem("white");
+    });
+    $("#section-items").find(".red").on("click", function(){
+      func.buyItem("red");
+    });
+    $("#section-items").find(".orange").on("click", function(){
+      func.buyItem("orange");
+    });
+    $("#section-items").find(".yellow").on("click", function(){
+      func.buyItem("yellow");
+    });
+
+
+    var $cart = $("#section-cart .cart");
+    $cart.on("click", ".del" , function() {
+      if(!confirm("Delete ?")) return;
+      $(this).closest("tr").remove();
+    });
+
+    $cart.on("click", ".btn-edit" , function() {
+      $(this).closest("td").addClass("edit-state");
+    });
+
+    
+
+
+
+  };
+
+  
+
   func.init = function() {
     func.initMainNav();
+    func.initShop();
   };
 
 
