@@ -24,6 +24,7 @@ header {
       &:first-child {
         text-align: left;
         padding-left: 60px;
+        position: relative;
 
         #lnkMainNav {
           cursor: pointer;
@@ -32,6 +33,7 @@ header {
           height: 3px;
           background: #FFF;
           position: relative;
+          transition: all .1s ease;
 
           &:before {
             content: '';
@@ -41,6 +43,7 @@ header {
             top: -10px;
             height: 10px;
             border-top: solid 3px #FFF;
+            transition: all .1s ease;
           }
 
           &:after {
@@ -51,8 +54,58 @@ header {
             top: 0;
             height: 10px;
             border-bottom: solid 3px #FFF;
+            transition: all .1s ease;
           }
-        }
+
+          & + div {
+            background: #FFF;
+            border-radius: 5px;
+            padding: 10px 0;
+            color: #373535;
+            width: 200px;
+            bottom: -125px;
+            position: absolute;
+            transition: all .3s ease;
+            opacity: 0;
+            box-shadow: 0 0 30px -6px #000;
+            z-index: 100;
+
+            > a {
+              display: block;
+              text-indent: 10px;
+              text-transform: capitalize;
+              text-decoration: none;
+              padding: 3px 0;
+              color: #373535;
+              transition: all .2s ease;
+              &:hover {
+                color: #FFF;
+                background: #373535;
+              }
+            }
+          }
+
+          &.actived {
+            background: transparent;
+            &:before {
+              transform: rotate(45deg);
+              top: 0;
+              height: 0;
+            }
+            &:after {
+              transform: rotate(-45deg);
+              height: 0;
+            }
+
+            & + div {
+              opacity: 1;
+              bottom: -130px;
+            }
+          }
+
+
+
+        } // #lnkMainNav
       }
 
       &:last-child {
