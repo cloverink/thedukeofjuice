@@ -51,7 +51,7 @@ var Main = (function (self) {
       tr += '<td>$12.50</td> ';
       tr += '<td> ';
         tr += '<form>';
-          tr += '<input type="text" value="1" readonly="true">';
+          tr += '<input type="number" value="1"> ';
         tr += '</form>';
         tr += '<a href="#!" class="btn btn-sky btn-ok">OK</a>';
         tr += '<a href="#!" class="btn-edit"><i class="fa fa-pencil-square-o"></i></a> ';
@@ -65,7 +65,30 @@ var Main = (function (self) {
   };
 
   func.calculatePrice = function() {
+    var total = 0;
+    var gst = 0;
+    var $cart = $("#section-cart .cart");
+    $cart.find("tbody tr").each(function(k, v) {
+        $row = $(v);
+        $col = $row.find("td");
+    
+        price = $col.eq(1)
+        price = +price.text().replace("$", "");
+        qty = +$col.eq(2).find("input").val();
+    
+        subtotal = (price * qty);
+        total += subtotal;
+        $col.eq(3).text("$" + subtotal.toFixed(2));
+    });
+    gst = total * 7 / 100;
 
+
+    var $grandTotal = $("#section-cart .grand-total");
+    
+    $grandTotal.find(".subtotal span").text("$" + total.toFixed(2));
+    $grandTotal.find(".incgst span").text("$" + gst.toFixed(2));
+    
+    $grandTotal.find(".grandtotal span").text("$" + (total + gst).toFixed(2));
   };
 
   func.initShop = function() {
@@ -94,15 +117,32 @@ var Main = (function (self) {
     $cart.on("click", ".del" , function() {
       if(!confirm("Delete ?")) return;
       $(this).closest("tr").remove();
+      func.calculatePrice();
     });
 
     $cart.on("click", ".btn-edit" , function() {
       $(this).closest("td").addClass("edit-state");
     });
 
+    $cart.on("click", ".btn-ok" , function() {
+      $(this).closest("td").removeClass("edit-state");
+      func.calculatePrice();
+    });
     
+    $cart.on("focus", "form input", function() {
+      $(this).closest("td").addClass("edit-state");
+    })
 
 
+    $("#btnUpdateCart").on("click", function(){
+      func.calculatePrice();
+    });
+
+    $("#btnEmptyCart").on("click", function(){
+      if(!confirm("Delete ?")) return;
+      $("#section-cart .cart").find("tbody").empty();
+      func.calculatePrice();
+    })
 
   };
 

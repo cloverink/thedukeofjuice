@@ -18,7 +18,7 @@
           <td>$12.50</td>
           <td>
             <form>
-              <input type="text" value="1" readonly="true">
+              <input type="number" value="1">
             </form>
             <a href="#!" class="btn btn-sky btn-ok">OK</a>
             <a href="#!" class="btn-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
@@ -39,9 +39,9 @@
 
 
             <div class="float-right">
-              <a href="#!" class="btn btn-sky">Empty Cart</a>
+              <a id="btnEmptyCart" href="#!" class="btn btn-sky">Empty Cart</a>
               <span>- OR -</span>
-              <a href="#!" class="btn btn-sky">Update Cart</a>
+              <a id="btnUpdateCart" href="#!" class="btn btn-sky">Update Cart</a>
             </div>
 
           </td>
