@@ -162,6 +162,8 @@ var Main = (function (self) {
       func.calculatePrice();
     })
 
+    func.calculatePrice();
+
   };
 
   

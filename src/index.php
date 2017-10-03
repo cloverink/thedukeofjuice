@@ -1,6 +1,6 @@
 <?php
 
-  $today = date("Ymd");
+  $today = date("YmdH");
 
   include("core/config.php");
   include("core/helper.php");

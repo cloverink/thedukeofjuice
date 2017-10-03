@@ -36,6 +36,7 @@ h6 {
   padding: 20px 15px;
   border-radius: 20px;
   display: inline-block;
+  cursor: pointer;
   &.btn-white {
     color: #373535;
     background: #FFF;
@@ -43,6 +44,11 @@ h6 {
   &.btn-sky {
     color: #FFF;
     background: #6b9cac;
+    transition: all .2s ease;
+    &:hover {
+      background: #818284;
+      color: #fff;
+    }
   }
 }
 
