@@ -91,25 +91,43 @@ var Main = (function (self) {
     $grandTotal.find(".grandtotal span").text("$" + (total + gst).toFixed(2));
   };
 
+  func.aniOnClick = function(target) {
+    $(target).addClass("clicked");
+    setTimeout(function() {
+      $(target).removeClass("clicked");
+    }, 100);
+  };
+
   func.initShop = function() {
+
+    $("#btnAddToCartProd").on("click", function(){
+      func.buyItem("blue");
+      func.aniOnClick(this);
+    });
 
     $("#section-items").find(".brown").on("click", function(){
       func.buyItem("brown");
+      func.aniOnClick(this);
     });
     $("#section-items").find(".green").on("click", function(){
       func.buyItem("green");
+      func.aniOnClick(this);
     });
     $("#section-items").find(".white").on("click", function(){
       func.buyItem("white");
+      func.aniOnClick(this);
     });
     $("#section-items").find(".red").on("click", function(){
       func.buyItem("red");
+      func.aniOnClick(this);
     });
     $("#section-items").find(".orange").on("click", function(){
       func.buyItem("orange");
+      func.aniOnClick(this);
     });
     $("#section-items").find(".yellow").on("click", function(){
       func.buyItem("yellow");
+      func.aniOnClick(this);
     });
 
 

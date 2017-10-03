@@ -124,6 +124,6 @@
   </div>
   <div class="control">
     <a href="#!" class="btn btn-white">QTY: 1</a>
-    <a href="#!" class="btn">+ Add To Cart</a>
+    <a id="btnAddToCartProd" href="#!" class="btn">+ Add To Cart</a>
   </div>
 </section>

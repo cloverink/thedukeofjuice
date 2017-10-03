@@ -349,6 +349,7 @@ section {
     background: url('/assets/images/1x1.png') center center no-repat;
     background-size: 100%;
     position: relative;
+    transition: all .1s ease;
     img {
       visibility: hidden;
       z-index: -1;
@@ -402,6 +403,9 @@ section {
         top: calc(~"50% - 55px/2");
         opacity: 1;
       }
+    }
+    &.clicked {
+      transform: scale(0.95);
     }
   }
 }
@@ -509,6 +513,13 @@ section {
     z-index: 999;
     a+a {
       margin-left: 20px;
+    }
+
+    #btnAddToCartProd {
+      transition: all .1s ease;
+      &.clicked {
+        transform: scale(0.95)
+      }
     }
   }
   &.blue {
