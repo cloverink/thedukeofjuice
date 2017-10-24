@@ -2,7 +2,7 @@
   <h3 class="title bg-black">Login or create an account</h3>
   <div class="container">
     <div>
-      <h3 class="title bg-gray">Login or create an account</h3>
+      <h3 class="title bg-gray">New here ?</h3>
       <div class="intro">
         <h4><i>Registration is free and easy!</i></h4>
         <ul>
@@ -15,7 +15,7 @@
 
     </div>
     <div>
-      <h3 class="title bg-gray">Login or create an account</h3>
+      <h3 class="title bg-gray">Already registered ?</h3>
       <div class="intro">
         <h4><i>if you have an account with us, please log in.</i></h4>
         <form>
